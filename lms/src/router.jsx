@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Announcements from "./components/Announcements.jsx";
 import Subjects from "./components/Subjects.jsx";
@@ -9,6 +10,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/announcements" element={<Announcements />} />
       <Route path="/subjects" element={<Subjects />} />

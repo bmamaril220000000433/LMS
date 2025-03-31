@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .background {
     position: fixed;
     top: 0;
@@ -48,6 +50,13 @@
     border-radius: 9px;
 }
 .login-form{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.register-form{
     margin-top: 55px;
     display: flex;
     flex-direction: column;
