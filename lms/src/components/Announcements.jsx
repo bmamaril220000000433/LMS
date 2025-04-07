@@ -5,6 +5,17 @@ import "../css/Dashboard.css";
 
 function Announcements() {
   const navigate = useNavigate();
+  
+    const home = () => {
+      navigate("/dashboard");
+    };
+    const settings = () => {
+      navigate("/settings");
+    };
+  
+    const logout = () => {
+      navigate("/");
+    };
 
   const announcements = [
     {
@@ -49,18 +60,26 @@ function Announcements() {
   };
 
   return (
-    <div className="h-screen w-screen bg-gray-50 overflow-y-auto">
-      <div className="bg-cyan-400 h-12 flex items-center justify-between px-6 shadow-sm fixed w-full top-0 z-10">
-        <button onClick={() => navigate('/dashboard')} className="text-white hover:text-gray-100 flex items-center">
-          <i className="fas fa-arrow-left mr-2"></i>
-          Back
-        </button>
-        <div className="flex items-center space-x-2">
-          <span className="text-white text-sm">Hi, Student</span>
-          <img src={Logo} alt="Profile" className="h-8 w-8 rounded-full" />
-        </div>
-      </div>
-
+        <div className="flex">
+          <div className="bg-cyan-400 absolute top-0 left-0 w-full h-25"></div>
+          <div className="absolute top-5 right-5 flex items-center space-x-3 z-10">
+            <span className="text-black font-semibold">Hi, Student</span>
+            <img src={Logo} alt="Profile" className="h-18 w-20 rounded-full" />
+          </div>
+    
+                <div className='bg-cyan-400 h-screen p-4 pt-5 z-1'>
+                  
+                  <div><img src= {Logo} alt="Logo" className='h-50 w-auto'/></div>
+                  <div className="card flex justify-center">
+                    <button className="w-40" onClick={home}>Home</button>
+                  </div>
+                  <div className="flex flex-col items-center justify-center pt-150">
+                  <button className="w-40" onClick={settings}>Settings</button>
+                  <div className="h-2" /> 
+                    <button className="w-40" onClick={logout}>Logout
+                    </button>
+                  </div>
+                  </div>
       <div className="pt-12">
         <div className="max-w-5xl mx-auto px-6 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
