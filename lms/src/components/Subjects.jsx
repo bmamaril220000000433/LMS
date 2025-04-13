@@ -52,6 +52,7 @@ function Subjects() {
     <div className="flex">
     <div className="bg-cyan-400 absolute top-0 left-0 w-full h-25"></div>
     <div className="absolute top-5 right-5 flex items-center space-x-3 z-10">
+    <i className="pi pi-arrow-left mr-348 text-3xl text-black cursor-pointer" onClick={() => navigate("/dashboard")}></i>
       <span className="text-black font-semibold">Hi, Student</span>
       <img src={Logo} alt="Profile" className="h-18 w-20 rounded-full" />
     </div>
@@ -70,11 +71,10 @@ function Subjects() {
             </div>
             </div>
 
-      <div className="pt-12 h-[calc(100vh-3rem)]">
+      <div className="w-screen pt-12 bg-gray-50 mt-10">
 
-        <div className="max-w-5xl mx-auto px-6 py-6 h-full">
+        <div className="max-w-5xl px-6 py-6 h-full">
           <h1 className="text-xl font-bold text-gray-800 mb-6">My Subjects</h1>
-
           <div className="space-y-3">
             {subjects.map((subject) => (
               <div key={subject.id} className="bg-white rounded-lg shadow-sm hover:shadow transition-all duration-200">

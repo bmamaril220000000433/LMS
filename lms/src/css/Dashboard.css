@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Add border around the entire table */
+.p-datatable {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Add borders between rows */
+.p-datatable-tbody > tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Add borders for the table header */
+.p-datatable-thead > tr > th {
+    border-bottom: 2px solid #4B4B4B;
+    background-color: #f4f4f4;
+}
+

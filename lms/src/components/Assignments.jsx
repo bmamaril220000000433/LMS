@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Card } from 'primereact/card';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/Kilig_Logo.png';
 
@@ -60,6 +59,7 @@ function Assignments() {
             <div className="flex">
               <div className="bg-cyan-400 absolute top-0 left-0 w-full h-25"></div>
               <div className="absolute top-5 right-5 flex items-center space-x-3 z-10">
+              <i className="pi pi-arrow-left mr-348 text-3xl text-black cursor-pointer" onClick={() => navigate("/dashboard")}></i>
                 <span className="text-black font-semibold">Hi, Student</span>
                 <img src={Logo} alt="Profile" className="h-18 w-20 rounded-full" />
               </div>
@@ -78,23 +78,20 @@ function Assignments() {
                       </div>
                       </div>
 
-      <div className="pt-12 h-[calc(100vh-3rem)]">
-        <div className="max-w-5xl mx-auto px-6 py-6 h-full">
+      <div className="w-screen pt-12 mt-20 bg-gray-50">
+        <div className="max-w-5xl px-6 py-6 h-full">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
             <h1 className="text-xl font-bold text-gray-800 mb-4 sm:mb-0">Assignments</h1>
             <div className="flex flex-wrap gap-2">
-              <button className="inline-flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-medium rounded-full hover:bg-blue-100 transition-colors">
-                <i className="fas fa-check-circle mr-1.5 opacity-75"></i>
+              <p className="inline-flex items-center px-3 py-1.5 text-blue-700 text-xs font-medium rounded-full bg-blue-100">
                 Assigned
-              </button>
-              <button className="inline-flex items-center px-3 py-1.5 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full hover:bg-yellow-100 transition-colors">
-                <i className="fas fa-clock mr-1.5 opacity-75"></i>
+              </p>
+              <p className="inline-flex items-center px-3 py-1.5 text-yellow-700 text-xs font-medium rounded-full bg-yellow-100">
                 Due
-              </button>
-              <button className="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-700 text-xs font-medium rounded-full hover:bg-red-100 transition-colors">
-                <i className="fas fa-exclamation-circle mr-1.5 opacity-75"></i>
+              </p>
+              <p className="inline-flex items-center px-3 py-1.5 text-red-700 text-xs font-medium rounded-full bg-red-100">
                 Missed
-              </button>
+              </p>
             </div>
           </div>
 

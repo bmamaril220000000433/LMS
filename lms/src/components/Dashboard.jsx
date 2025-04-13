@@ -4,6 +4,7 @@ import Logo2 from '../assets/Megaphone.png';
 import { useNavigate } from "react-router-dom";
 import { Card } from 'primereact/card';
 import "../css/Dashboard.css";
+import 'primeicons/primeicons.css';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -41,11 +42,11 @@ function Dashboard() {
               </div>
               </div>
 
-      <div className="h-screen w-screen bg-gray-50 overflow-y-auto">
+      <div className="w-screen bg-gray-50 overflow-y-auto mt-25">
         <div className="p-6">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-2xl font-bold mb-6 text-gray-800">Welcome to Your Dashboard</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="max-w-6xl">
+            <h1 className="text-2xl font-bold mb-6 text-gray-800 mr-10">Welcome, Student</h1>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mr-10">
               <Card className="bg-white shadow-sm hover:shadow transition-shadow cursor-pointer overflow-hidden" onClick={() => navigate('/announcements')}>
                 <div className="p-4 flex items-center">
                   <div className="bg-blue-100 p-3 rounded-lg">
@@ -62,7 +63,7 @@ function Dashboard() {
               <Card className="bg-white shadow-sm hover:shadow transition-shadow cursor-pointer overflow-hidden" onClick={() => navigate('/assignments')}>
                 <div className="p-4 flex items-center">
                   <div className="bg-green-100 p-3 rounded-lg">
-                    <i className="fas fa-tasks text-xl text-green-600"></i>
+                    <i className="pi pi-book text-xl text-green-600"></i>
                   </div>
                   <div className="ml-4 flex-1">
                     <h2 className="text-lg font-semibold text-gray-800">Assignments</h2>
@@ -75,11 +76,24 @@ function Dashboard() {
               <Card className="bg-white shadow-sm hover:shadow transition-shadow cursor-pointer overflow-hidden" onClick={() => navigate('/subjects')}>
                 <div className="p-4 flex items-center">
                   <div className="bg-purple-100 p-3 rounded-lg">
-                    <i className="fas fa-book text-xl text-purple-600"></i>
+                  <i className="pi pi-graduation-cap text-xl text-green-600"></i>
                   </div>
                   <div className="ml-4 flex-1">
                     <h2 className="text-lg font-semibold text-gray-800">Subjects</h2>
                     <p className="text-sm text-gray-600">Your courses and schedules</p>
+                  </div>
+                  <i className="fas fa-chevron-right text-gray-400"></i>
+                </div>
+              </Card>
+
+              <Card className="bg-white shadow-sm hover:shadow transition-shadow cursor-pointer overflow-hidden" onClick={() => navigate('/grades')}>
+                <div className="p-4 flex items-center">
+                  <div className="bg-purple-100 p-3 rounded-lg">
+                  <i className="pi pi-bookmark text-xl text-green-600"></i>
+                  </div>
+                  <div className="ml-4 flex-1">
+                    <h2 className="text-lg font-semibold text-gray-800">Grades</h2>
+                    <p className="text-sm text-gray-600">View your grades</p>
                   </div>
                   <i className="fas fa-chevron-right text-gray-400"></i>
                 </div>
