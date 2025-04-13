@@ -17,6 +17,11 @@ function Announcements() {
       navigate("/");
     };
 
+    const readmore = () => {
+      navigate("/readmore");
+    };
+
+
   const announcements = [
     {
       id: 1,
@@ -87,7 +92,7 @@ function Announcements() {
                       <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">{announcement.content}</p>
                     </div>
                     <button className="shrink-0 inline-flex items-center px-4 py-2 bg-cyan-400 text-white text-sm font-medium rounded hover:bg-cyan-500 transition-colors">
-                      <span>Read More</span>
+                      <span onClick={readmore}>Read More</span>
                       <i className="fas fa-chevron-right ml-2 text-xs opacity-75"></i>
                     </button>
                   </div>

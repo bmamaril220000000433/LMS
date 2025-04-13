@@ -17,6 +17,10 @@ function Subjects() {
     navigate("/");
   };
   
+  const viewdetailssubject = () => {
+    navigate("/viewdetailssubject");
+  };
+
   const subjects = [
     {
       id: 1,
@@ -103,7 +107,7 @@ function Subjects() {
                       </div>
                     </div>
                     <button className="shrink-0 inline-flex items-center px-4 py-2 bg-cyan-400 text-white text-sm font-medium rounded hover:bg-cyan-500 transition-colors">
-                      <span>View Details</span>
+                      <span onClick={viewdetailssubject}> View Details</span>
                       <i className="fas fa-chevron-right ml-2 text-xs opacity-75"></i>
                     </button>
                   </div>
